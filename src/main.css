@@ -143,10 +143,7 @@
 .aadhar {
   position: absolute;
   width: 80%;
-  /* right: -80%; */
-}
-.aadhar {
-  right: 10%;
+  right: -80%;
 }
 .cross,
 .a-cross {
