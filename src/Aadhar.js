@@ -66,12 +66,16 @@ const Aadhar = () => {
                   $(".a-cross").fadeIn();
                 } else {
                   $(".a-cross").fadeOut();
+                  $(".body").show();
+                  setTimeout(() => {
+                    $(".temp").fadeIn();
+                  }, 2000);
                 }
-                console.log("varify = ", data);
+                console.log("verify = ", data);
               });
           }}
         >
-          Varify
+          Verify
         </button>
       </div>
     </div>

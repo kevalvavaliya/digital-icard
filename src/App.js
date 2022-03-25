@@ -2,10 +2,10 @@ import React from "react";
 import "./App.css";
 import Main from "./Main";
 import Navbar from "./Navbar";
-
+import $ from "jquery";
 function App() {
   return (
-    <div className="body">
+    <div>
       <div className="container">
         <div className="container2">
           <Navbar />
@@ -15,11 +15,30 @@ function App() {
           <Main />
         </div>
       </div>
-      <div className="success-popup">
-        <div className="sucess-text">
-          <span>User Registered Successfully</span>
-          <i className="fa-solid fa-badge-check right"></i>
-          <button>OK</button>
+      <div className="body">
+        <div className="temp">
+          <div className="success-popup">
+            <div className="sucess-text">
+              <h3>User Registered Successfully</h3>
+            </div>
+            <lottie-player
+              src="https://assets9.lottiefiles.com/packages/lf20_jtl6gife.json"
+              background="transparent"
+              speed="1"
+              style={{ width: "200px", height: "200px", marginTop: "-2rem" }}
+              autoplay
+            ></lottie-player>
+            <button
+              onClick={() => {
+                $(".temp").fadeOut();
+                setTimeout(() => {
+                  $(".body").hide();
+                }, 1500);
+              }}
+            >
+              OK
+            </button>
+          </div>
         </div>
       </div>
     </div>
