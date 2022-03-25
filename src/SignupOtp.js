@@ -16,6 +16,7 @@ const SignupOtp = () => {
             setOtp(e.target.value);
           }}
         />
+        <i className="fa-solid fa-xmark cross"></i>
         <div className="s-otp-btns">
           <button
             onClick={() => {
@@ -55,9 +56,12 @@ const SignupOtp = () => {
                 .then((res) => res.json())
                 .then((data) => {
                   if (data.status === "approved") {
-                    $(".form").animate({ minHeigth: "420px !important" });
+                    // $(".form").animate({ heigth: "420px" });
+                    document.querySelector(".form").style.height = "420px";
                     $(".s-otp").animate({ left: "-100%" });
                     $(".aadhar").animate({ right: "10%" });
+                  } else if (data.status === "pending") {
+                    $(".cross").fadeIn();
                   }
                   console.log("varify = ", data);
                 });

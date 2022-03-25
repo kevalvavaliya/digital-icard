@@ -20,7 +20,8 @@
 .form {
   /* border: 2px solid black; */
   overflow: hidden;
-  min-height: 330px;
+  transition: 0.3s;
+  height: 330px;
   position: relative;
   min-width: 60%;
   padding: 2rem;
@@ -143,4 +144,19 @@
   position: absolute;
   width: 80%;
   right: -80%;
+}
+/* .aadhar {
+  right: 10%;
+} */
+.cross,
+.a-cross {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 10px;
+  font-size: 18px;
+  color: red;
+}
+.a-cross {
+  top: 1.3rem;
 }

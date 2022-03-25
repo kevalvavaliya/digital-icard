@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import $ from "jquery";
 const Aadhar = () => {
   const [aadhar, setAadhar] = useState();
   const [name, setName] = useState();
@@ -17,6 +17,7 @@ const Aadhar = () => {
     );
   return (
     <div className="aadhar">
+      <i className="fa-solid fa-xmark a-cross"></i>
       <input
         type="text"
         name=""
@@ -60,7 +61,14 @@ const Aadhar = () => {
               }
             )
               .then((res) => res.json())
-              .then((data) => console.log("varify = ", data));
+              .then((data) => {
+                if (data.stcode === 102) {
+                  $(".a-cross").fadeIn();
+                } else {
+                  $(".a-cross").fadeOut();
+                }
+                console.log("varify = ", data);
+              });
           }}
         >
           Varify
