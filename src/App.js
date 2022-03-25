@@ -25,6 +25,7 @@ function App() {
               src="https://assets9.lottiefiles.com/packages/lf20_jtl6gife.json"
               background="transparent"
               speed="1"
+              loop
               style={{ width: "200px", height: "200px", marginTop: "-2rem" }}
               autoplay
             ></lottie-player>
